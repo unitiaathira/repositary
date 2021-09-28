@@ -1,0 +1,126 @@
+
+body{
+    font-family : sans-serif;
+    }
+    /*** navbar ***/
+ .nav-item{
+            letter-spacing : .2em;
+            font-size : 14px;
+            text-transform : uppercase;
+            }
+.dropdown-item{
+                letter-spacing : .2em;
+                font-size : 14px;
+                text-transform : uppercase;
+                }
+
+.my_footer{
+            background-color:orange;
+            height:60px;
+}
+.my_footer{
+        padding-top:20px;
+        font-size:14px;
+}
+/*** category page ***/
+.my_row_class{
+            padding-top:5px;
+            }
+.my_row_class .mx_auto{
+                        color:#000;
+                        font-size:12px;
+                       }
+.my_image{
+            width:100%;
+            height:auto;
+          }
+.my_title{
+            font-size:12px;
+            text-transform : uppercase;
+            letter-spacing : .2em;
+           }
+.my_image_padding{
+                    padding:5px;
+                  }
+ .container{
+            position:relative;
+            }
+
+.my_bottom_margin{
+                  margin-bottom:10px;
+                  }
+                  .text-block{
+            position:absolute;
+            padding-top:50px;
+            padding-left:20px;
+            padding-right:20px;
+            bottom:10px;
+            right:20px;
+            background-color:#000;
+            color:white;
+            text-align:center;
+            }
+.card-body h4{
+              font-size:14px;
+              text-transform:uppercase;
+              letter-spacing:.2em;
+              }
+.card-img-top{
+                height:500px;
+                height:500px;
+                }
+.my_prod_row_class{
+                    padding-top:15px;
+                    padding-bottom:20px;
+                    }
+.my_prod_row_class .mx_auto{
+                            color:#000;
+                            font-size:12px;
+                            text-decoration:none;
+                            }
+.my_prod_title{
+               font-size:16px;
+               text-transform:uppercase;
+               letter-spacing:.2em;
+               padding-top:15px;
+               padding-bottom:10px;
+               }
+.my_prod_text{
+               padding-right:20px;
+              }
+.my_search_text{
+                padding-top:20px;
+                }
+/***
+@font-face {
+    font-family: 'Malayalam';
+    src: url('../fonts/meera.eot');
+    src: url('../fonts/meera.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/meera.woff') format('woff'),
+         url('../fonts/meera.ttf') format('truetype'),
+         url('../fonts/meera.svg#Malayalam') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+**/
+.my_custom_table{
+                min_width:400px;
+                font-size:14px;
+                }
+.my_custom_thead{
+                  font-weight:normal;
+                  text-transformation:uppercase;
+                  letter-spacing:.2em;
+                  background-color:#f8f9fa!important;
+                 }
+.custom_a{
+            text-decoration:none;
+            }
+.custom_icon{
+            text-decoration:none;
+            color:#868e96 !important;
+            }
+.my_custom_button{
+                    margin-top:5px;
+                   }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="athi1">
+    <div class="athi2">
+        <div class="athi3" id="athi2">
+            <div class="athi4">
+                <h2>LOGIN FORM</h2>
+                <form method="post">
+                    <input type="text" class="input" placeholder="Enter your name" required>
+                    <input type="email" class="input" placeholder="Enter your mail id" required>
+                    <input type="password" class="input" placeholder="Enter your password" required>
+                    <button type="submit" class="submitbutton">submit</button>
+                    <input type="checkbox"><span>Remember Me </span>
+                </form>
+                <button type="button" class="button"  onclick="openRegister()">iam new here</button>
+            </div>
+            <div class="athi5">
+                <h2>REGISTERATION FORM</h2>
+                <form method="post">
+                    <input type="text" class="input" placeholder="Enter your name" required>
+                    <input type="email" class="input" placeholder="Enter your mail id" required>
+                    <input type="number" class="input" placeholder="enter your ph.no">
+                    <label>Select your gender</label>
+                     <input type="radio" name="gender">female
+                     <input type="radio" name="gender">male
+                    <input type="password" class="input" placeholder="Enter your password" required>
+                    <input type="password" class="input" placeholder="Confirm your password" required>
+                    <button type="submit" class="submitbutton">submit</button>
+                    <input type="checkbox"><span>I understood all the things given above  </span>
+                </form>
+                <button class="button" onclick="openLogin()" type="button" style="color:black;">i have an account</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var myvariable=document.getElementId("athi2")
+    function openRegister(){
+    athi2.style.transform="rotateY(-180deg)";
+    }
+
+    function openLogin(){
+    athi2.style.transform="rotateY(0deg)";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if category %}
+        {{ category.description|truncatewords:55 }}
+    {% else %}
+        welcome to ABC Store
+    {% endif %}
+{% endblock %}
+{% block title %}
+    {% if category %}
+        {{ category.name }}  -- ABC Store c
+    {% else %}
+        see our new collections...
+    {% endif %}
+{% endblock %}
+{% block content %}
+{% if category %}
+    <div>
+        <div class="row my_row_class">
+            <div class="mx_auto">
+            <p class="text-justify"><a href="{% url 'shoppingapp:Cproduct' %}">Our Products</a> </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+        <div class="mx_auto">
+            {% if category %}
+            <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
+        </div>
+        <br>
+        <div>
+            <h1 class="text-center my-title">{{category.name}}</h1>
+        <p class="text-justify">{{category.description}}</p>
+    </div>
+        {% else %}
+    <div class="container">
+
+        <img class="my_image my_image_padding" src="{% static 'img/banner1.jpg' %}" alt="our products" width="1000px" height="175px">
+<!--        <div class="text-block">-->
+<!--            <br>-->
+<!--            <h4 style="text-align:center;">@ <i>ABC</i> Ecommerce shop</h4>-->
+<!--            <p>Curated Collection of Exclusive Home Accessories &<br> Everyday essentials</p>-->
+<!--            athira@gmail.com<br>-->
+<!--            ph:xxxxxxxxxx-->
+
+<!--        </div>-->
+    </div>
+    <br>
+    <div>
+        <h1 class="text-center my_title">Our Product Collections</h1>
+    <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+</div>
+{% endif %}
+<div class="container">
+    <div class="row mx_auto">
+        {% for product in products.object_list %}
+
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 xol-lg-4">
+<div class="card text-center" style="min-width:18rem;">
+    <div class="container">
+            <a href="{{product.get_url}}"><img class="card-img-top my_image" src="{{product.image.url}}" alt="{{product.name}}"></a>
+            <div class="card-body">
+            <h4>{{product.name}}</h4>
+            <p>{{product.price}}</p>
+
+             {% if product.stock <= 0 %}
+                <p><b>out of stock</b></p>
+            {% else %}
+                <a href="">Add to Cart</a>
+            {% endif %}
+                 </div>
+        </div>
+        </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="mx_auto">
+        {% if products.paginator.num_pages > 1 %}
+
+            <div class="text-center">
+            {% for pg in products.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if products.number == pg %} active {% endif %}">{{pg}}</a>
+            {% endfor %}
+ {% endif %}
+            </div>
+
+        <br>
+    </div>
+</div>
+
+{% endblock %}
